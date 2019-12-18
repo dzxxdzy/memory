@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>冬冬小游戏</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css" media="all" />
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/memory.js" type="text/javascript"></script>
+</head>
+
+<body bgcolor="#00FFFF">
+    <div style='display: flex;height: 100px; justify-content: center;align-items: center;'>
+        <strong id="timer"></strong>
+    </div>
+
+    <div style='display: flex; justify-content: center;align-items: center;'>
+
+        <div style="display: flex; flex-direction: row;width: 150px;justify-content:space-between;">
+            <button onClick="gameStart()">开始游戏</button>
+            <button onClick="production()">重新开局</button>
+        </div>
+    </div>
+    <div style='display: flex; flex-direction: row;justify-content: center; margin-top: 20px;'>
+
+        <div id="myscreen" style=" border:#609 ">
+            <!--游戏表格区-->
+            <table id="elementTable" class="outercase" bgcolor="#FFFF66" border="2" cellspacing="3" cellpadding="3">
+
+            </table>
+        </div>
+        <!-- 排行榜 -->
+        <div id="ranking" style="margin-left: 50px;">
+            <span>排行榜</span>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
