@@ -19,6 +19,7 @@
         <div style="display: flex; flex-direction: row;width: 150px;justify-content:space-between;">
             <button onClick="gameStart()">开始游戏</button>
             <button onClick="production()">重新开局</button>
+
         </div>
     </div>
     <div style='display: flex; flex-direction: row;justify-content: center; margin-top: 20px;'>
@@ -32,10 +33,14 @@
         <!-- 排行榜 -->
         <div id="ranking" style="margin-left: 50px;">
             <span>排行榜</span>
-
+            <audio src="audio/bg_music.mp3" muted autoplay loop id="myaudio" style="display: none">
+                您的浏览器不支持 audio 标签。
+            </audio>
+            <button onClick="closeMusic()">静音</button>
         </div>
     </div>
 
 </body>
+<script src="js/audio.js" type="text/javascript"></script>
 
 </html>

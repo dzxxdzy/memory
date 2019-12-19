@@ -5,16 +5,17 @@ var timerV; //计时器
 var num = 0; //计时点
 var already = 0;
 var INIT_NUM = 10;
+
 $(function() {
-        $("#elementTable").html('<img style="height:150px;width:150px;"   src="picture/babysbreath.jpg"  >');
-    })
-    /**
-     * 1、打乱数组元素顺序，使每次生成的元素位置都不一样
-     * 2、遍历节点生成4x5表格
-     */
+    $("#elementTable").html('<img style="height:150px;width:150px;"   src="picture/babysbreath.jpg"  >');
+})
+
+/**
+ * 1、打乱数组元素顺序，使每次生成的元素位置都不一样
+ * 2、遍历节点生成4x5表格
+ */
 function production() {
     if (typeof timerV !== 'undefined') {
-        console.log(timerV)
         $("#timer").html(0 + "秒");
         num = 0
         clearInterval(timerV)
@@ -133,6 +134,20 @@ function randomNum(x, y) {
  * clearInterval(timerV);//定时器清除;
  */
 function timer() {
+    var timerV = setInterval(function() {
+        num++;
+        $("#timer").html(num + "秒");
+    }, 1000);
+
+    return timerV;
+}
+
+/**
+ * 音效
+ * AudioContext();
+ */
+
+function AudioContext() {
     var timerV = setInterval(function() {
         num++;
         $("#timer").html(num + "秒");
